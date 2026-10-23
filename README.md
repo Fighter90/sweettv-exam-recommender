@@ -54,6 +54,7 @@ groups, so re-running an early hybrid attempt uses the full feature set and can 
 
 - `checks/`: `audit_data.py` (data accounting), `independent_truth.py` (the answer rule re-implemented without `src/`, brute-force join on 300 random users), `hand_inputs.py` (inputs for the by-hand join and AP@5 checks), `check_submission.py` (format checks of a submission file and comparison with `submission/sub_final.csv`).
 - `results/oc/`: logs of the reproduction on an Apple M1 (OpenCode session, report Table 4): `versions.txt`, `check-1…9-*.txt`, `results_diff_on_this_machine.txt`, the regenerated `sub_repro.csv` and two extra probes (`t8_recall.py`, `check_truth_from_file.py`).
+- `docs/ai_session_summary.md`: an English summary of the Claude Code session (`emelyanov_sergey_exam_claude_session.json`, submitted with the report).
 
 ## Reproduce
 
