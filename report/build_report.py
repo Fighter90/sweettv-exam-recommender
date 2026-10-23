@@ -16,7 +16,7 @@ OUT = f'/home/claude/sw/report/emelyanov_sergey_exam_report{"_ru" if RU else ""}
 FIG = '/home/claude/sw/report/fig1_methods.png'
 SHOT = '/home/claude/sw/report/kaggle_submissions.png'
 SHOT2 = '/home/claude/sw/report/kaggle_submission_details.png'
-REPO = 'https://github.com/Fighter90/sweettv-exam-recommender'
+REPO = 'https://github.com/Fighter90/sweettv-recommender'
 
 
 def T(en, ru):
