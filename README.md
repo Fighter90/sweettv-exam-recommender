@@ -2,9 +2,9 @@
 
 Sergey Emelyanov (Kaggle: `pochtasergeia`). Competition: <https://www.kaggle.com/competitions/sweettv-tv-program-recommender> (late submission).
 
-**Final submission** [`submission/sub_final.csv`](submission/sub_final.csv): public MAP@5 **0.46135**, private 0.44801
+**Final submission** [`submission/sub_final.csv`](submission/sub_final.csv): private MAP@5 **0.44801** (the score the course grades), public 0.46135
 (screenshot: [`screenshots/kaggle_submissions.png`](screenshots/kaggle_submissions.png)).
-First submission `submission/sub_bin3.csv`: public 0.45892, private 0.44756.
+First submission `submission/sub_bin3.csv`: private 0.44756, public 0.45892.
 Report (IEEE format, PDF): [`report/emelyanov_sergey_exam_report.pdf`](report/emelyanov_sergey_exam_report.pdf).
 
 ## Task and metric

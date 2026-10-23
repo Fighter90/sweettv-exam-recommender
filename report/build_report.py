@@ -103,8 +103,8 @@ P('The task is to predict, for 1,260 sweet.tv users, the five programmes they wi
   'weeks 11–20 → 21–30 hold-out, and compared a popularity baseline with personal frequency, Personalized PageRank (PPR), '
   'association rules, ALS matrix factorisation, item-kNN and content-based filtering before re-ranking their candidates '
   'with LightGBM. On the 1,150 test users with a full hold-out top-5, the best single method (PPR, α = 0.5) reaches '
-  'MAP@5 0.394 and popularity 0.305, while the final hybrid ensemble reaches 0.447; on Kaggle it returned public 0.46135 '
-  '(private 0.44801). On this platform, most of the signal is repeat viewing of the same news, kids\' and entertainment '
+  'MAP@5 0.394 and popularity 0.305, while the final hybrid ensemble reaches 0.447; on Kaggle it returned private 0.44801 '
+  '(public 0.46135). On this platform, most of the signal is repeat viewing of the same news, kids\' and entertainment '
   'shows, so a hybrid that keeps the user\'s own history as the backbone outperforms pure collaborative filtering.')
 P('*Index Terms* — recommender systems, implicit feedback, personalized PageRank, learning to rank, TV viewing logs.', after=3)
 
@@ -117,15 +117,15 @@ P('**Problem statement.** The competition [1] gives a view log (`user_id, vsetv_
   'screen time ≥ 0.8, count them per programme and take the five most frequent, in order.')
 P('**Motivation.** My first local truth (any overlap ≥ 300 s) gave the popularity baseline MAP@5 0.727. That is far from '
   'the 0.4–0.46 range of real submissions, so the metric was not measuring the competition\'s target. With the official '
-  'rule the same baseline scores 0.305, and the hold-out estimate of the first hybrid (0.440) landed near its Kaggle public '
-  'score (0.459). Before tuning any model, the evaluation itself has to be validated.')
+  'rule the same baseline scores 0.305, and the hold-out estimate of the first hybrid (0.440) landed near its Kaggle private '
+  'score (0.448). Before tuning any model, the evaluation itself has to be validated.')
 P('**Concrete example.** User 8377619604347126107 (90th percentile of activity) watched *ТСН. Неделя* 59 times and '
   '*Факты. День* 22 times at ≥ 80 % screen time in weeks 11–20. In weeks 21–30 the top-5 was ТСН. Неделя, '
   'Сегодня. Итоги, Факты. День, Завтрак с 1+1 and Свинка Пеппа. The hybrid returns exactly these five (AP@5 = 1.000), '
   'popularity hits four of them (0.710) and ALS three (0.550), Table 3.')
 P('**Contributions.** (i) A leakage-free pipeline that reproduces the organisers\' answer rule locally, with 124 logged '
   'attempts in which each method is first evaluated individually, then combined. (ii) A hybrid (candidate generation + '
-  'LightGBM) that improves MAP@5 by +0.053 over the best single method on the same users, and a public score of 0.46135.', after=3)
+  'LightGBM) that improves MAP@5 by +0.053 over the best single method on the same users, and a Kaggle private score of 0.44801 (public 0.46135).', after=3)
 
 # ------------------------------------------------------------------ 2
 H('2. Related Work')
@@ -218,11 +218,11 @@ P('**Comparison vs baseline.** Popularity is a strong reference (0.305), because
   'the user\'s own items when α ≥ 0.5) beat popularity by about 0.09. The hybrid adds a further +0.053, because it '
   'learns when a habit continues: recent weekly counts, catch rate and the number of target-window airings. '
   'Hyper-parameter changes after attempt 35 moved the score by at most ±0.005, the size of the noise.')
-P('**Kaggle.** The first hybrid submission (3 seeds, attempt-12 settings) returned public 0.45892 / private 0.44756. The '
-  'final ensemble returned **public 0.46135 / private 0.44801** (Fig. 2), with the description "Емельянов Сергей '
+P('**Kaggle.** The first hybrid submission (3 seeds, attempt-12 settings) returned private 0.44756 / public 0.45892. The '
+  'final ensemble returned **private 0.44801 / public 0.46135** (Fig. 2), the best of the two on both splits (the course grades the private score), with the description "Емельянов Сергей '
   '(pochtasergeia)" as the course requires.')
 doc.add_picture(SHOT, width=Cm(15.5)); doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
-P('Fig. 2. Kaggle submissions page of account pochtasergeia: final submission sub_final.csv (public 0.46135).',
+P('Fig. 2. Kaggle submissions page of account pochtasergeia: final submission sub_final.csv (private 0.44801, public 0.46135).',
   size=8, italic=True, after=3)
 P('**Verification.** (a) *Join*: on 2020-03-16 the user above viewed channel 1+1 from 06:26:04 to 06:27:24, while '
   'ТСН. Неделя aired 05:00–06:30 (5,400 s). Overlap = 80 s, screen time 80 / 5,400 = 0.0148, so this airing is not '
