@@ -1,0 +1,125 @@
+attempt,group,description,MAP@5_test_users_1150,MAP@5_all_users_4030,seconds
+1,single method,"popularity (high-screen airings, cand pool)",0.30509,0.27927,0.0
+2,single method,personal frequency,0.38285,0.34695,0.1
+3,single method,"personal frequency, decay hl=4w",0.37644,0.33742,0.1
+4,single method,"personal frequency, decay hl=2w",0.35390,0.31770,0.1
+5,single method,personal frequency x target airings / history airings,0.37179,0.33343,0.1
+6,single method,ALS f=64,0.21158,0.20779,2.3
+7,single method,item-kNN cosine,0.20908,0.19949,0.8
+8,single method,PPR alpha=0.15,0.34871,0.32303,31.1
+9,single method,"assoc rules conf, minsup=20",0.31978,0.29970,2.9
+10,single method,"CBF tfidf (cat,genre,dir,actors,channel)",0.19358,0.18465,3.4
+11,hybrid LightGBM,"LGB lambdarank, all features, graded label",0.42852,0.39840,59.3
+12,hybrid LightGBM,"LGB binary objective, all features",0.43969,0.40444,38.4
+13,hybrid LightGBM,"LGB lambdarank, length-normalised features only",0.42567,0.39616,51.3
+14,hybrid LightGBM,"LGB lambdarank, no generator features (history+schedule only)",0.43362,0.39914,55.2
+15,hybrid LightGBM,"LGB lambdarank, binary relevance label",0.43483,0.40107,61.3
+16,hybrid LightGBM,"LGB lambdarank, leaves=31 lr=0.03 rounds=800",0.43714,0.40311,93.7
+17,hybrid LightGBM,"LGB lambdarank, leaves=127 min_leaf=100",0.42904,0.39448,75.9
+18,hybrid LightGBM,LGB rank_xendcg,0.43829,0.40136,33.7
+19,hybrid LightGBM,LGB poisson regression on target high-screen count,0.43548,0.39907,46.3
+20,hybrid LightGBM,LGB L2 regression on log1p(count),0.43577,0.40263,30.7
+21,hybrid LightGBM,"LGB lambdarank, graded label (watched + top-5 position)",0.43208,0.39964,64.2
+22,hybrid LightGBM,"LGB binary, 3 seeds rank-averaged",0.43888,0.40737,114.7
+23,hybrid LightGBM,LGB binary + habit (channel x weekday x hour occupancy) features,0.43659,0.40321,43.3
+24,hybrid LightGBM,LGB lambdarank + habit features,0.43266,0.40049,61.3
+25,history-length transfer test,"train 5w-history, infer 5w-history (all feats)",0.43117,0.39719,111.6
+26,history-length transfer test,"train 5w-history, infer 10w-history (all feats)",0.43489,0.40242,111.6
+27,history-length transfer test,"train 5w-history, infer 5w-history (normalised feats)",0.43126,0.39766,143.2
+28,history-length transfer test,"train 5w-history, infer 10w-history (normalised feats)",0.42950,0.39690,143.2
+29,hybrid LightGBM,LGB binary + stickiness/recent-catch/near-term-airing features,0.43794,0.40559,47.9
+30,hybrid LightGBM,LGB xendcg + extra features,0.43623,0.40208,41.9
+31,hybrid LightGBM,"LGB binary, train S1 + S2 (hist 11-24 -> 25-30)",0.44259,0.40842,86.0
+32,hybrid LightGBM,"LGB binary, train S1 + S2 + S3 (hist 11-17 -> 18-24)",0.44175,0.40936,117.2
+33,hybrid LightGBM,"LGB binary, train S1 + S4 (hist 11-22 -> 23-30)",0.43772,0.40576,85.2
+34,hybrid LightGBM,binary leaves=15,0.44269,0.40993,101.5
+35,hybrid LightGBM,binary leaves=31,0.44692,0.41093,100.9
+36,hybrid LightGBM,binary leaves=127,0.44173,0.40894,135.4
+37,hybrid LightGBM,binary leaves=31 lr=0.03 rounds=700,0.44504,0.41165,157.8
+38,hybrid LightGBM,binary leaves=63 min_leaf=200,0.44235,0.40981,117.9
+39,hybrid LightGBM,binary leaves=63 min_leaf=20,0.44429,0.41082,114.7
+40,hybrid LightGBM,binary feature_fraction=0.5,0.44240,0.40859,157.3
+41,hybrid LightGBM,binary rounds=200,0.44389,0.41015,77.5
+42,hybrid LightGBM,binary rounds=800 lr=0.03,0.44385,0.41034,201.5
+43,hybrid LightGBM,binary lambda_l2=10,0.44214,0.40911,125.4
+44,hybrid LightGBM,binary scale_pos_weight=5,0.44561,0.41020,116.2
+45,hybrid LightGBM,binary bagging_fraction=0.5 feature_fraction=0.6,0.44146,0.40839,168.4
+46,hybrid LightGBM,"xendcg, S1+S2+S3",0.44163,0.40634,99.5
+47,hybrid LightGBM,"lambdarank, S1+S2+S3",0.43917,0.40586,177.9
+48,hybrid LightGBM,"regression log1p(count), S1+S2+S3",0.44245,0.40873,90.0
+49,hybrid LightGBM,"binary without generator features, S1+S2+S3",0.44311,0.40933,108.2
+50,hybrid LightGBM,"binary without raw counts (normalised only), S1+S2+S3",0.44138,0.40814,95.7
+51,ensemble of hybrids,ens rank-avg 35+37+44,0.44692,0.41220,1.0
+52,ensemble of hybrids,ens rank-avg 35+37+39+41+42+44,0.44540,0.41161,1.6
+53,ensemble of hybrids,ens binary(35)+regression(48),0.44662,0.41061,0.8
+54,ensemble of hybrids,ens binary(35)+xendcg(46)+regr(48),0.44690,0.41249,1.5
+55,ensemble of hybrids,ens all 34-50 (17 models),0.44659,0.41257,5.0
+56,hybrid LightGBM,"binary L31, S1+S2+S3, tie-aware positives",0.44354,0.40910,393.4
+57,hybrid LightGBM,"binary L31, S1+S2+S3+S4",0.44529,0.40978,492.2
+58,hybrid LightGBM,"binary L31, S1+S2+S3, 5 seeds",0.44423,0.41167,493.1
+59,hybrid LightGBM,"binary L31 DART 300 rounds, S1+S2+S3",0.44138,0.40712,268.1
+60,hybrid LightGBM,"binary L31 + within-user percentile features, S1+S2+S3",0.44312,0.41008,144.0
+61,single method,"personal frequency, screen-time threshold 0.5",0.39172,0.35604,0.2
+62,single method,"personal frequency, screen-time threshold 0.95",0.37223,0.33451,0.2
+63,single method,"personal frequency, decay hl=6w",0.38339,0.34095,0.2
+64,single method,"personal frequency, decay hl=10w",0.38366,0.34236,0.2
+65,single method,"personal frequency, last 5 weeks only",0.35543,0.32097,0.2
+66,single method,ALS f=16 reg=0.05 alpha=10 value=log,0.23510,0.22655,2.3
+67,single method,ALS f=32 reg=0.05 alpha=10 value=log,0.22438,0.21252,2.1
+68,single method,ALS f=128 reg=0.05 alpha=10 value=log,0.19711,0.19446,2.7
+69,single method,ALS f=64 reg=0.5 alpha=10 value=log,0.21087,0.20678,2.3
+70,single method,ALS f=64 reg=0.01 alpha=10 value=log,0.21396,0.20900,2.3
+71,single method,ALS f=64 reg=0.05 alpha=1 value=log,0.17979,0.17709,2.4
+72,single method,ALS f=64 reg=0.05 alpha=40 value=log,0.15264,0.15498,2.3
+73,single method,ALS f=64 reg=0.05 alpha=10 value=count,0.19299,0.18737,2.3
+74,single method,PPR alpha=0.05,0.33635,0.30941,31.2
+75,single method,PPR alpha=0.1,0.33992,0.31451,30.1
+76,single method,PPR alpha=0.3,0.37934,0.34737,31.2
+77,single method,PPR alpha=0.5,0.39350,0.36068,30.3
+78,single method,PPR alpha=0.7,0.39610,0.36058,31.0
+79,single method,PPR alpha=0.15 binary edges,0.30118,0.28048,30.9
+80,single method,"assoc rules confidence, minsup=5",0.30883,0.29033,2.8
+81,single method,"assoc rules confidence, minsup=10",0.31738,0.29814,3.0
+82,single method,"assoc rules confidence, minsup=50",0.31999,0.29970,2.8
+83,single method,"assoc rules confidence, minsup=100",0.31466,0.29532,3.0
+84,single method,"assoc rules lift, minsup=20",0.01178,0.01375,2.4
+85,single method,"assoc rules lift, minsup=50",0.02652,0.02989,2.5
+86,single method,"CBF weights cat/gen/dir/act/ch=(1, 1, 0, 0, 0)",0.06480,0.06139,3.3
+87,single method,"CBF weights cat/gen/dir/act/ch=(1, 1, 0.5, 0.5, 0)",0.08783,0.08436,2.0
+88,single method,"CBF weights cat/gen/dir/act/ch=(0, 0, 0, 0, 1)",0.07394,0.07616,1.2
+89,single method,"CBF weights cat/gen/dir/act/ch=(1, 1, 1, 1, 2)",0.20410,0.19035,2.1
+90,single method,"CBF weights cat/gen/dir/act/ch=(0.5, 1, 1, 1, 1)",0.19856,0.18953,2.0
+91,single method,item-kNN shrink=0.0,0.20603,0.19687,0.9
+92,single method,item-kNN shrink=50.0,0.21788,0.20665,1.0
+93,hybrid LightGBM,"binary L31 S1+S2+S3 + PPR(0.5,0.7)/freq50 pair features",0.44418,0.41044,113.2
+94,hybrid LightGBM,as 93 + S4,0.44294,0.41099,148.8
+95,hybrid LightGBM,"as 93, 5 seeds",0.44460,0.41196,557.9
+96,hybrid LightGBM,"lambdarank + PPR pair features, S1+S2+S3",0.44112,0.40682,171.9
+97,hybrid LightGBM,regression log1p(count) + PPR pair features,0.44459,0.41038,95.9
+98,hybrid LightGBM,xendcg + PPR pair features,0.44000,0.40685,100.5
+99,hybrid LightGBM,binary L15 + PPR pair features,0.44409,0.41062,97.8
+100,hybrid LightGBM,binary L63 + PPR pair features,0.44221,0.40964,118.5
+101,hybrid LightGBM,binary L31 lr=0.03 rounds=700 + PPR pair features,0.44535,0.41174,163.3
+102,hybrid LightGBM,binary L31 min_leaf=100 + PPR pair features,0.44462,0.41121,110.8
+103,hybrid LightGBM,binary L31 feature_fraction=0.6 + PPR pair features,0.44389,0.41073,127.7
+104,hybrid LightGBM,binary L31 without top-N generator columns (keeps PPR pair features),0.44337,0.40976,102.2
+105,hybrid LightGBM,binary L31 tie-aware positives + PPR pair features,0.44460,0.40911,113.5
+106,hybrid LightGBM,"binary L31 S1+S2+S3 + weekly lag features (lag0-9, slope, run)",0.44548,0.41203,124.5
+107,hybrid LightGBM,"as 106, 5 seeds",0.44603,0.41241,528.6
+108,hybrid LightGBM,regression log1p(count) + lag features,0.44258,0.40898,104.1
+109,hybrid LightGBM,binary L63 + lag features,0.44334,0.40990,123.3
+110,hybrid LightGBM,"binary L31 + lag features, S1+S2+S3+S4",0.44246,0.40979,150.6
+111,ensemble of hybrids,ens 107+101,0.44632,0.41256,0.9
+112,ensemble of hybrids,ens 107+95,0.44472,0.41202,0.9
+113,ensemble of hybrids,ens 107+97 (binary+regression),0.44661,0.41253,0.9
+114,ensemble of hybrids,ens 107+101+97,0.44714,0.41269,1.1
+115,ensemble of hybrids,ens 107+55,0.44694,0.41289,0.9
+116,ensemble of hybrids,ens 107+95+55+101,0.44594,0.41253,1.4
+117,ensemble of hybrids,ens 107:2+101+97+99,0.44668,0.41265,1.3
+118,ensemble of hybrids,ens 107+106+101+102+99+93,0.44561,0.41255,1.6
+119,ensemble of hybrids,ens 107+58+95 (multi-seed sets),0.44479,0.41261,1.1
+120,ensemble of hybrids,ens 107+37+51,0.44526,0.41211,1.0
+121,hybrid LightGBM,"binary L31 lr=0.03 rounds=700 + lag features, 3 seeds",0.44511,0.41268,509.9
+122,hybrid LightGBM,"regression log1p(count) L31 + lag features, 3 seeds",0.44511,0.40989,257.2
+123,ensemble of hybrids,FINAL ens: 107 (binary 5 seeds) + 121 (binary slow 3 seeds) + 122 (regression 3 seeds),0.44692,0.41315,1.1
+124,ensemble of hybrids,ens 107+121,0.44503,0.41250,0.9

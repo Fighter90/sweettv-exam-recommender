@@ -1,0 +1,45 @@
+#106 sub=0.44548 all=0.41203  124.5s  binary L31 S1+S2+S3 + weekly lag features (lag0-9, slope, run)
+#109 sub=0.44334 all=0.40990  123.3s  binary L63 + lag features
+#108 sub=0.44258 all=0.40898  104.1s  regression log1p(count) + lag features
+#110 sub=0.44246 all=0.40979  150.6s  binary L31 + lag features, S1+S2+S3+S4
+#107 sub=0.44603 all=0.41241  528.6s  as 106, 5 seeds
+#121 sub=0.44511 all=0.41268  509.9s  binary L31 lr=0.03 rounds=700 + lag features, 3 seeds
+#122 sub=0.44511 all=0.40989  257.2s  regression log1p(count) L31 + lag features, 3 seeds
+# 34 sub=0.44269 all=0.40993  101.5s  binary leaves=15
+# 35 sub=0.44692 all=0.41093  100.9s  binary leaves=31
+# 36 sub=0.44173 all=0.40894  135.4s  binary leaves=127
+# 37 sub=0.44504 all=0.41165  157.8s  binary leaves=31 lr=0.03 rounds=700
+# 38 sub=0.44235 all=0.40981  117.9s  binary leaves=63 min_leaf=200
+# 39 sub=0.44429 all=0.41082  114.7s  binary leaves=63 min_leaf=20
+# 40 sub=0.44240 all=0.40859  157.3s  binary feature_fraction=0.5
+# 41 sub=0.44389 all=0.41015   77.5s  binary rounds=200
+# 42 sub=0.44385 all=0.41034  201.5s  binary rounds=800 lr=0.03
+# 43 sub=0.44214 all=0.40911  125.4s  binary lambda_l2=10
+# 44 sub=0.44561 all=0.41020  116.2s  binary scale_pos_weight=5
+# 45 sub=0.44146 all=0.40839  168.4s  binary bagging_fraction=0.5 feature_fraction=0.6
+# 46 sub=0.44163 all=0.40634   99.5s  xendcg, S1+S2+S3
+# 47 sub=0.43917 all=0.40586  177.9s  lambdarank, S1+S2+S3
+# 48 sub=0.44245 all=0.40873   90.0s  regression log1p(count), S1+S2+S3
+# 49 sub=0.44311 all=0.40933  108.2s  binary without generator features, S1+S2+S3
+# 50 sub=0.44138 all=0.40814   95.7s  binary without raw counts (normalised only), S1+S2+S3
+# 56 sub=0.44354 all=0.40910  393.4s  binary L31, S1+S2+S3, tie-aware positives
+# 57 sub=0.44529 all=0.40978  492.2s  binary L31, S1+S2+S3+S4
+# 58 sub=0.44423 all=0.41167  493.1s  binary L31, S1+S2+S3, 5 seeds
+# 59 sub=0.44138 all=0.40712  268.1s  binary L31 DART 300 rounds, S1+S2+S3
+# 60 sub=0.44312 all=0.41008  144.0s  binary L31 + within-user percentile features, S1+S2+S3
+# 93 sub=0.44418 all=0.41044  113.2s  binary L31 S1+S2+S3 + PPR(0.5,0.7)/freq50 pair features
+# 94 sub=0.44294 all=0.41099  148.8s  as 93 + S4
+# 96 sub=0.44112 all=0.40682  171.9s  lambdarank + PPR pair features, S1+S2+S3
+# 97 sub=0.44459 all=0.41038   95.9s  regression log1p(count) + PPR pair features
+# 98 sub=0.44000 all=0.40685  100.5s  xendcg + PPR pair features
+# 99 sub=0.44409 all=0.41062   97.8s  binary L15 + PPR pair features
+#100 sub=0.44221 all=0.40964  118.5s  binary L63 + PPR pair features
+#101 sub=0.44535 all=0.41174  163.3s  binary L31 lr=0.03 rounds=700 + PPR pair features
+#102 sub=0.44462 all=0.41121  110.8s  binary L31 min_leaf=100 + PPR pair features
+#103 sub=0.44389 all=0.41073  127.7s  binary L31 feature_fraction=0.6 + PPR pair features
+#104 sub=0.44337 all=0.40976  102.2s  binary L31 without top-N generator columns (keeps PPR pair features)
+#105 sub=0.44460 all=0.40911  113.5s  binary L31 tie-aware positives + PPR pair features
+# 95 sub=0.44460 all=0.41196  557.9s  as 93, 5 seeds
+# 31 sub=0.44259 all=0.40842   86.0s  LGB binary, train S1 + S2 (hist 11-24 -> 25-30)
+# 32 sub=0.44175 all=0.40936  117.2s  LGB binary, train S1 + S2 + S3 (hist 11-17 -> 18-24)
+# 33 sub=0.43772 all=0.40576   85.2s  LGB binary, train S1 + S4 (hist 11-22 -> 23-30)
