@@ -602,16 +602,18 @@ BL([T('**Tools.** (1) Claude Code (Anthropic), cloud session, model Claude Opus 
       'агента; исправление моего сопоставления первой отправки с попыткой #22 пришло от агента OpenCode. Побайтные прогоны '
       'на Linux делал Claude Code, а не моя машина. Также я доверился внутреннему устройству LightGBM и ALS из `implicit` '
       'и описанию правила ответа организаторами (их правило ничьих неизвестно).'),
-    T('**Session logs.** Both sessions are submitted: `emelyanov_sergey_exam_session.jsonl` (Claude Code: development, '
+    T('**Session logs.** Both sessions are submitted: `emelyanov_sergey_exam_claude_session.json` (Claude Code: development, '
       'the 124 attempts, both submissions, this report; an English summary is in `docs/ai_session_summary.md`) and '
       '`emelyanov_sergey_exam_opencode_session.json` (OpenCode session ses_e95aa2d45ffelUbzQd00ghZrWQ of 2026-10-23, the '
-      'reproduction in Table 4, unmodified; its logs and check scripts are in `results/oc/` and `checks/`). In the Claude Code '
-      'export only two personal e-mail addresses and expired Kaggle web-analytics tokens are masked; nothing else is changed.',
-      '**Логи сессий.** Сдаются обе сессии: `emelyanov_sergey_exam_session.jsonl` (Claude Code: разработка, 124 попытки, '
+      'reproduction in Table 4, unmodified; its logs and check scripts are in `results/oc/` and `checks/`). The Claude Code '
+      'export is the session\'s JSONL records as one JSON array; only two personal e-mail addresses and expired Kaggle '
+      'web-analytics tokens are masked, nothing else is changed.',
+      '**Логи сессий.** Сдаются обе сессии: `emelyanov_sergey_exam_claude_session.json` (Claude Code: разработка, 124 попытки, '
       'обе отправки, этот отчёт; краткое изложение на английском — в `docs/ai_session_summary.md`) и '
       '`emelyanov_sergey_exam_opencode_session.json` (сессия OpenCode ses_e95aa2d45ffelUbzQd00ghZrWQ от 2026-10-23, '
-      'воспроизведение из Таблицы 4, без изменений; её логи и скрипты проверок — в `results/oc/` и `checks/`). В выгрузке '
-      'Claude Code скрыты только два личных адреса e-mail и просроченные аналитические токены Kaggle; больше ничего не изменено.')])
+      'воспроизведение из Таблицы 4, без изменений; её логи и скрипты проверок — в `results/oc/` и `checks/`). Выгрузка Claude '
+      'Code — записи сессии из JSONL одним массивом JSON; скрыты только два личных адреса e-mail и просроченные аналитические '
+      'токены Kaggle, больше ничего не изменено.')])
 
 # ------------------------------------------------------------------ refs
 H(T('References', 'Список литературы'))

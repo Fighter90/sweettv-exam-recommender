@@ -1,6 +1,6 @@
 # AI session summary (Claude Code)
 
-A short English summary of the Claude Code session `emelyanov_sergey_exam_session.jsonl` (2026-10-22 to 2026-10-24), which is submitted alongside the report. Most of the session itself is in Russian. Use the export for the exact commands and outputs; this page only lists what was done, in order. The reproduction on a second machine is a separate OpenCode session (`emelyanov_sergey_exam_opencode_session.json`); the report's Table 4 has its numbers.
+A short English summary of the Claude Code session `emelyanov_sergey_exam_claude_session.json` (2026-10-22 to 2026-10-24), which is submitted alongside the report. Most of the session itself is in Russian. Use the export for the exact commands and outputs; this page only lists what was done, in order. The reproduction on a second machine is a separate OpenCode session (`emelyanov_sergey_exam_opencode_session.json`); the report's Table 4 has its numbers.
 
 Tool: Claude Code, cloud session, model Claude Opus 5.5. It worked in my Mac folder `~/kaggle` and, for the Kaggle website steps, in my Chrome browser.
 
@@ -35,4 +35,4 @@ Tool: Claude Code, cloud session, model Claude Opus 5.5. It worked in my Mac fol
 - Moved the repository to `Fighter90/sweettv-recommender` with the same content; the OpenCode session refers to the first commit by its earlier hash `3e3efea`, now `5c905ea`.
 
 ## Masking in the export
-In `emelyanov_sergey_exam_session.jsonl` only these strings are replaced: my two personal e-mail addresses (by `[email]`) and Kaggle web-analytics tokens from a browser network log, which had already expired (by `[token]`). Nothing else is changed.
+`emelyanov_sergey_exam_claude_session.json` holds the session's JSONL records, in order, as one JSON array. Only these strings are replaced: my two personal e-mail addresses (by `[email]`) and Kaggle web-analytics tokens from a browser network log, which had already expired (by `[token]`). Nothing else is changed.
