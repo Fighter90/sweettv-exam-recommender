@@ -220,8 +220,10 @@ P('**Comparison vs baseline.** Popularity is a strong reference (0.305), because
   'Hyper-parameter changes after attempt 35 moved the score by at most ±0.005, the size of the noise.')
 P('**Kaggle.** The first hybrid submission (3 seeds, attempt-12 settings) returned private 0.44756 / public 0.45892. The '
   'final ensemble returned **private 0.44801 / public 0.46135** (Fig. 2), the best of the two on both splits (the course grades the private score), with the description "Емельянов Сергей '
-  '(pochtasergeia)" as the course requires.')
-doc.add_picture(SHOT, width=Cm(15.5)); doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+  'Борисович (pochtasergeia) — …" (full name in Russian and Kaggle name, as the course requires), and it is the '
+  'designated final submission (Kaggle disables selecting a submission after the deadline, so it is designated by '
+  'this screenshot, this report and submission/sub_final.csv in the repository).')
+doc.add_picture(SHOT, width=Cm(12.5)); doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
 P('Fig. 2. Kaggle submissions page of account pochtasergeia: final submission sub_final.csv (private 0.44801, public 0.46135).',
   size=8, italic=True, after=3)
 P('**Verification.** (a) *Join*: on 2020-03-16 the user above viewed channel 1+1 from 06:26:04 to 06:27:24, while '
