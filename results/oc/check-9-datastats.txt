@@ -1,0 +1,13 @@
+view rows 5821987 users in log 4914 channels in log 202
+view duration median s 396 max s 342145
+schedule tr1 rows 1074235 labelled 115613 share 0.1076
+schedule tr2 rows 1074394 labelled 121505 share 0.1131
+schedule test rows 1295378 labelled 144774 share 0.1118
+joined user-airing rows (overlap>0, labelled) 3014129 users 4895 programmes 4363
+rows with screen time >= 0.8 615979 share 0.2044
+test users 1260 with labelled history 1258
+hold-out users with full top-5 in weeks 21-30 4030 of them test users 1150
+candidate programmes airing in weeks 21-30 6376
+candidate programmes airing in weeks 31-42 6642 airings with an id never seen in weeks 11-30 6308 of 145041
+hold-out ranker frame rows 763658 users 4030 mean candidates/user 189.5
+candidate recall of the true top-5 (test users) 0.8513

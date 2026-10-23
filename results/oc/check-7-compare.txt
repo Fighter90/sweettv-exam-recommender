@@ -1,0 +1,12 @@
+[file] results/oc/sub_repro.csv  sha256 526d0f80f5def96f835603d72b4ddf7a25566cd505866dd17768421ecf7ef7d9
+  PASS  header is user_id,tv_show_id
+  PASS  1260 rows, same users in the same order as the template
+  PASS  5 ids per row
+  PASS  5 distinct ids per row
+  PASS  no id 0 (unlabelled airtime)
+  PASS  every id airs in the weeks 31-42 schedule
+[reference] submission/sub_final.csv  sha256 76f439ce09a3de80446c35d4752c5f6d03f08b82b132711368fbb09b1cbf7fe8
+  identical rows (same ids, same order): 722 of 1260
+  rows with the same five ids in any order: 1037 of 1260
+  byte-identical files: False
+[result] ALL CHECKS PASS

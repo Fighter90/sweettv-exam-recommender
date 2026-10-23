@@ -1,0 +1,25 @@
+diff --git a/results/data_stats.txt b/results/data_stats.txt
+index 7b85f96..0d4f3e4 100644
+--- a/results/data_stats.txt
++++ b/results/data_stats.txt
+@@ -9,5 +9,5 @@ test users 1260 with labelled history 1258
+ hold-out users with full top-5 in weeks 21-30 4030 of them test users 1150
+ candidate programmes airing in weeks 21-30 6376
+ candidate programmes airing in weeks 31-42 6642 airings with an id never seen in weeks 11-30 6308 of 145041
+-hold-out ranker frame rows 763617 users 4030 mean candidates/user 189.5
+-candidate recall of the true top-5 (test users) 0.8515
++hold-out ranker frame rows 763658 users 4030 mean candidates/user 189.5
++candidate recall of the true top-5 (test users) 0.8513
+diff --git a/results/examples.md b/results/examples.md
+index 414e82b..d82cb3f 100644
+--- a/results/examples.md
++++ b/results/examples.md
+@@ -1,7 +1,7 @@
+ 
+ ### User 8377619604347126107 (heavy, 90th percentile: 179 high-screen airings in weeks 11-20)
+ 
+-History top-5 (weeks 11-20, count of airings watched >= 80%): 2400480 'ТСН. Неделя'. [Инфо] x59; 240081 Факты. День. [Инфо] x22; 12002955 М/с 'Свинка Пеппа'. [Детям] x19; 200338 'Готовим вместе. Домашняя кухня'. [Познавательное] x12; 2400508 Сегодня. Итоги с Олегом Панютой. [Инфо] x10
++History top-5 (weeks 11-20, count of airings watched >= 80%): 2400480 'ТСН. Неделя'. [Инфо] x59; 240081 Факты. День. [Инфо] x22; 12002955 М/с 'Свинка Пеппа'. [Детям] x19; 200338 'Готовим вместе. Домашняя кухня'. [Познавательное] x12; 20088 'Завтрак с 1+1'. Информационно-развлекательная программа. [Развлечения] x10
+ 
+ Actual top-5 in weeks 21-30 (official rule): 2400480 'ТСН. Неделя'. [Инфо]; 2400508 Сегодня. Итоги с Олегом Панютой. [Инфо]; 240081 Факты. День. [Инфо]; 20088 'Завтрак с 1+1'. Информационно-развлекательная программа. [Развлечения]; 12002955 М/с 'Свинка Пеппа'. [Детям]
+ 

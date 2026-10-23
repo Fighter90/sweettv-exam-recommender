@@ -1,0 +1,19 @@
+[files]
+  dataset11-30.csv             396,216,555 bytes  sha1 a8f7e96ca42b7f012b4658c286bf46ede77358e7  expected: True
+  export_arh_11-20-final.csv   153,322,643 bytes  sha1 08d86cb22074d3138687547715b13e770d9ef045  expected: True
+  export_arh_21-30-final.csv   154,366,907 bytes  sha1 e3fe8351fbe6894f46a9b0e091ae35f9e4ae3de4  expected: True
+  export_arh_31-42-final.csv   185,952,991 bytes  sha1 487c3aa6337c529975e032b90cba3788766d4852  expected: True
+  submission.csv                    38,348 bytes  sha1 266b0a3c87fab62fab0b0ffa5b898da643272701  expected: True
+[views] dataset11-30.csv
+  rows 5,821,987  users 4,914  channels 202
+  first start 2020-03-09 00:00:02  last stop 2020-07-26 23:59:58
+  duration column name: duraton (sic); equals stop-start on 99.9980% of rows; median 396 s, max 342145 s
+  ISO weeks covered: 11..30 (week 11 starts Monday 2020-03-09)
+[schedule]
+  export_arh_11-20-final.csv: rows 1,074,235  from 2020-03-08 to 2020-05-18  channels 400  labelled (tv_show_id != 0) 115,613 = 10.76%  distinct ids 5,847  airtime labelled 15.97%
+  export_arh_21-30-final.csv: rows 1,074,394  from 2020-05-18 to 2020-07-27  channels 403  labelled (tv_show_id != 0) 121,505 = 11.31%  distinct ids 6,363  airtime labelled 16.90%
+  export_arh_31-42-final.csv: rows 1,295,378  from 2020-07-27 to 2020-10-19  channels 404  labelled (tv_show_id != 0) 144,774 = 11.18%  distinct ids 6,636  airtime labelled 16.67%
+[template] submission.csv
+  rows 1260  unique users 1260  all rows "0 0 0 0 0": True
+  template users present in the view log: 1260 of 1260
+[time] 16 s

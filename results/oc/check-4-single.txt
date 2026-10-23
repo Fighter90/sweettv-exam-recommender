@@ -1,0 +1,11 @@
+val users 1150 cand 6376
+#  1 sub=0.30509 all=0.27927    0.0s  popularity (high-screen airings, cand pool)
+#  2 sub=0.38285 all=0.34695    0.1s  personal frequency
+# 61 sub=0.39172 all=0.35604    0.1s  personal frequency, screen-time threshold 0.5
+# 66 sub=0.23510 all=0.22655    1.0s  ALS f=16 reg=0.05 alpha=10 value=log
+# 77 sub=0.39350 all=0.36068   23.0s  PPR alpha=0.5
+# 78 sub=0.39610 all=0.36058   24.1s  PPR alpha=0.7
+# 82 sub=0.31989 all=0.29969    0.9s  assoc rules confidence, minsup=50
+# 84 sub=0.01179 all=0.01365    0.9s  assoc rules lift, minsup=20
+# 89 sub=0.20357 all=0.18997    3.2s  CBF weights cat/gen/dir/act/ch=(1, 1, 1, 1, 2)
+# 92 sub=0.21788 all=0.20665    0.5s  item-kNN shrink=50.0

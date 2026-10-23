@@ -1,0 +1,5 @@
+export_arh_11-20-final.csv 1074235 labelled 115613 3.0s
+export_arh_21-30-final.csv 1074394 labelled 121505 6.0s
+export_arh_31-42-final.csv 1295378 labelled 144774 9.6s
+views 5821987 users 4914 19.2s
+join rows 3014129 users 4895 shows 4363 22.9s

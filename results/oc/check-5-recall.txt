@@ -1,0 +1,13 @@
+[history] test users with full truth: 1150
+  share of true top-5 already in own weeks 11-20 history: any overlap 0.7861   screen time >= 0.8 0.6205
+  users with zero of their true top-5 in own history:    any overlap 2.09%   screen time >= 0.8 5.91%
+[recall] recall of the true top-5 within the method list; coverage = users with any scored candidate
+attempt  method                                     R@5    R@30   cov@5   MAP@5
+      1  popularity (shared padding list)        0.3870  0.6546 100.00% 0.30509
+      2  personal frequency                      0.4414  0.6179  98.96% 0.38285
+     66  ALS f=16 reg=0.05 alpha=10 value=log    0.3270  0.7160  99.13% 0.23510
+     78  PPR alpha=0.7                           0.4562  0.7071  99.13% 0.39610
+     82  assoc rules confidence, minsup=50       0.3890  0.6878  99.13% 0.31999
+     89  CBF weights (1, 1, 1, 1, 2)             0.2770  0.5650  99.13% 0.20410
+     92  item-kNN shrink=50.0                    0.3186  0.6682  99.13% 0.21788
+[time] 30 s

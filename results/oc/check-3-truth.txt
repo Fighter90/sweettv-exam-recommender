@@ -1,0 +1,4 @@
+[independent] 300 random users (seed 0); 247 have a full top-5 in weeks 21-30; 16 s
+[src] users with a full top-5: 247
+[compare] identical top-5 lists: 247 of 247
+[example] user 127680364314713816: top-5 [700389, 2400480, 6700482, 12001682, 12002355]

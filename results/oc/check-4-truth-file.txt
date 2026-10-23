@@ -1,0 +1,24 @@
+[views] sampled users: 300, last stop 2020-07-26 23:59:57 (week-31 rows in the file can matter only if this reaches 2020-07-27)
+[file] export_arh_21-30-final.csv labelled rows: 121505, span 2020-05-18 00:00:00 .. 2020-07-27 08:15:00
+[file-only] 247 of 300 users have a full top-5; 11 s
+[src] users with a full top-5: 247
+[compare] identical top-5 lists: 246 of 247
+[compare] differing users: 1
+  DIFF 5215032701573495051 file-only [12002378, 12002352, 12002262, 12002809, 12002955] src [12002378, 12002352, 12002955, 12002262, 12002809]
+[boundary 2020-05-18] labelled airings: in 11-20 file 283, in 21-30 file 1348, keys in both 0, keys only in 11-20 283, keys only in 21-30 1348
+[boundary 2020-07-27] labelled airings: in 21-30 file 267, in 31-42 file 1445, keys in both 0, keys only in 21-30 267, keys only in 31-42 1445
+[why] user 5215032701573495051: 11 qualifying airing(s) start on 2020-05-18 (in src truth only if the airing sits in the 11-20 file):
+    ts=6048900 start=2020-05-18 00:15:00 show=12002955 title=? pdur=300 ov=300 ov/pdur=1.0000 copies in 11-20 file=1 in 21-30 file=0
+    ts=6049200 start=2020-05-18 00:20:00 show=12002955 title=? pdur=300 ov=300 ov/pdur=1.0000 copies in 11-20 file=1 in 21-30 file=0
+    ts=6049500 start=2020-05-18 00:25:00 show=12002955 title=? pdur=300 ov=300 ov/pdur=1.0000 copies in 11-20 file=1 in 21-30 file=0
+    ts=6049800 start=2020-05-18 00:30:00 show=12002955 title=? pdur=300 ov=300 ov/pdur=1.0000 copies in 11-20 file=1 in 21-30 file=0
+    ts=6051600 start=2020-05-18 01:00:00 show=12002896 title=? pdur=1500 ov=1500 ov/pdur=1.0000 copies in 11-20 file=1 in 21-30 file=0
+    ts=6053100 start=2020-05-18 01:25:00 show=12002896 title=? pdur=1200 ov=1200 ov/pdur=1.0000 copies in 11-20 file=1 in 21-30 file=0
+    ts=6079800 start=2020-05-18 08:50:00 show=90047375 title=? pdur=6900 ov=6242 ov/pdur=0.9046 copies in 11-20 file=0 in 21-30 file=1
+    ts=6120000 start=2020-05-18 20:00:00 show=1000589 title=? pdur=2700 ov=2700 ov/pdur=1.0000 copies in 11-20 file=0 in 21-30 file=1
+    ts=6122700 start=2020-05-18 20:45:00 show=1000589 title=? pdur=2700 ov=2700 ov/pdur=1.0000 copies in 11-20 file=0 in 21-30 file=1
+    ts=6127200 start=2020-05-18 22:00:00 show=2400467 title=? pdur=2700 ov=2700 ov/pdur=1.0000 copies in 11-20 file=0 in 21-30 file=1
+    ts=6129900 start=2020-05-18 22:45:00 show=90080719 title=? pdur=7800 ov=7800 ov/pdur=1.0000 copies in 11-20 file=0 in 21-30 file=1
+[why] user 5215032701573495051: programmes whose airing count differs (src vs file-only):
+    show 12002896: src n=6, file-only n=4, of which qualifying 05-18 airings: 2
+    show 12002955: src n=13, file-only n=9, of which qualifying 05-18 airings: 4

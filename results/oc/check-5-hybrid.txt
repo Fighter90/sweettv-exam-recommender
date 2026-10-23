@@ -1,0 +1,4 @@
+#107 sub=0.44565 all=0.41224  466.4s  as 106, 5 seeds
+#121 sub=0.44678 all=0.41267  580.3s  binary L31 lr=0.03 rounds=700 + lag features, 3 seeds
+#122 sub=0.44408 all=0.40961  239.7s  regression log1p(count) L31 + lag features, 3 seeds
+#123 sub=0.44548 all=0.41138    0.9s  final
