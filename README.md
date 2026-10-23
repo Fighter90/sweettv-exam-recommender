@@ -6,6 +6,7 @@ Sergey Emelyanov (Kaggle: `pochtasergeia`). Competition: <https://www.kaggle.com
 (screenshots: [`screenshots/kaggle_submissions.png`](screenshots/kaggle_submissions.png), [`screenshots/kaggle_submission_details.png`](screenshots/kaggle_submission_details.png)).
 First submission `submission/sub_bin3.csv`: private 0.44756, public 0.45892.
 Report (IEEE format, PDF): [`report/emelyanov_sergey_exam_report.pdf`](report/emelyanov_sergey_exam_report.pdf).
+Commit hashes: the OpenCode session log refers to the initial commit by its earlier hash `3e3efea`; the same content is now commit `5c905ea`.
 
 ## Task and metric
 
