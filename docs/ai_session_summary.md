@@ -35,4 +35,4 @@ Tool: Claude Code, cloud session, model Claude Opus 5.5. It worked in my Mac fol
 - Moved the repository to `Fighter90/sweettv-recommender` with the same content; the OpenCode session refers to the first commit by its earlier hash `3e3efea`, now `5c905ea`.
 
 ## Masking in the export
-`emelyanov_sergey_exam_claude_session.json` holds the session's JSONL records, in order, as one JSON array. Only these strings are replaced: my two personal e-mail addresses (by `[email]`) and Kaggle web-analytics tokens from a browser network log, which had already expired (by `[token]`). Nothing else is changed.
+`emelyanov_sergey_exam_claude_session.json` holds the session's JSONL records, in order, as one JSON array. Only personal and third-party data are replaced: e-mail addresses (`[email]`), account, organisation, session and device ids (`[account-id]`, `[org-id]`, `[session-id]`, `[env-id]`, `[kaggle-user-id]`), my local user name and computer name (`[user]`, `[host]`), the instructor's Telegram handle (`[telegram]`), classmates' names, forwarded messages and scores (`[classmate]`, `[masked]`), and expired Kaggle web-analytics tokens (`[token]`). Nothing else is changed.

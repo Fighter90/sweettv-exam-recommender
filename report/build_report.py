@@ -606,14 +606,16 @@ BL([T('**Tools.** (1) Claude Code (Anthropic), cloud session, model Claude Opus 
       'the 124 attempts, both submissions, this report; an English summary is in `docs/ai_session_summary.md`) and '
       '`emelyanov_sergey_exam_opencode_session.json` (OpenCode session ses_e95aa2d45ffelUbzQd00ghZrWQ of 2026-10-23, the '
       'reproduction in Table 4, unmodified; its logs and check scripts are in `results/oc/` and `checks/`). The Claude Code '
-      'export is the session\'s JSONL records as one JSON array; only two personal e-mail addresses and expired Kaggle '
-      'web-analytics tokens are masked, nothing else is changed.',
+      'export is the session\'s JSONL records as one JSON array; only personal and third-party data are masked (e-mail '
+      'addresses, account and device ids, my local user name, classmates\' names, messages and scores, expired tokens), '
+      'nothing else is changed.',
       '**Логи сессий.** Сдаются обе сессии: `emelyanov_sergey_exam_claude_session.json` (Claude Code: разработка, 124 попытки, '
       'обе отправки, этот отчёт; краткое изложение на английском — в `docs/ai_session_summary.md`) и '
       '`emelyanov_sergey_exam_opencode_session.json` (сессия OpenCode ses_e95aa2d45ffelUbzQd00ghZrWQ от 2026-10-23, '
       'воспроизведение из Таблицы 4, без изменений; её логи и скрипты проверок — в `results/oc/` и `checks/`). Выгрузка Claude '
-      'Code — записи сессии из JSONL одним массивом JSON; скрыты только два личных адреса e-mail и просроченные аналитические '
-      'токены Kaggle, больше ничего не изменено.')])
+      'Code — записи сессии из JSONL одним массивом JSON; скрыты только личные и чужие данные (адреса e-mail, '
+      'идентификаторы аккаунтов и устройств, моё локальное имя пользователя, имена, сообщения и результаты однокурсников, '
+      'просроченные токены), больше ничего не изменено.')])
 
 # ------------------------------------------------------------------ refs
 H(T('References', 'Список литературы'))
